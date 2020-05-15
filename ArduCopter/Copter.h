@@ -72,17 +72,11 @@
 #include "defines.h"
 #include "config.h"
 
-#if FRAME_CONFIG == HELI_FRAME
-    #define AC_AttitudeControl_t AC_AttitudeControl_Heli
-#else
-    #define AC_AttitudeControl_t AC_AttitudeControl_Multi
-#endif
+#define AC_AttitudeControl_t AC_AttitudeControl_Multi
 
-#if FRAME_CONFIG == HELI_FRAME
- #define MOTOR_CLASS AP_MotorsHeli
-#else
- #define MOTOR_CLASS AP_MotorsMulticopter
-#endif
+
+#define MOTOR_CLASS AP_MotorsMulticopter
+
 
 #include "RC_Channel.h"         // RC Channel Library
 
